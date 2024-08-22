@@ -69,6 +69,7 @@ header span{
     display: grid;
     place-items: center;
     border-bottom: 2px solid var(--Light-Lemon-Green);
+    transition: .3s ease-in-out;
 }
 .applyForAccessText:hover{
     cursor: pointer;
@@ -90,25 +91,22 @@ header span{
     color: var(--Very-Dark-Purple);
     /* font-size: clamp(1rem, 1vw, 4rem); */
     padding: 1em;
-    border: none;
-    font-size: 1em;
+    border: 2px solid var(--Light-Lemon-Green);
+    font-weight: 400;
+    transition: .3s ease-in-out;
 }
 .btn:hover{
     background: transparent;
     color: var(--Light-Lemon-Green);
-    border: 1px solid var(--Light-Lemon-Green);
-    font-weight: 500;
 }
 .data-box .title{
-    width: 90%;
-    margin: 0 auto;
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 4vw, 5rem);
     color: var(--White);
 }
 .data-box .title span{
     border-bottom: 2px solid var(--Light-Lemon-Green);
 }
-picture{
+.iPhone-11{
     z-index: 10;
     position: relative;
     top: 0;
@@ -169,61 +167,52 @@ picture{
 
 /* BOTTOM - SECTION - SECTION*/
 .bottom{
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    height: 70%;
-    width: 70%;
-    max-width: 80em;
-    margin: 5em auto;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 2em 5em;
+    width: 100%;
+    max-width: 100em;
+    /* margin: 5em auto; */
     place-items: center;
 }
-.jerry{
-    width: 300px;
-    height: 300px;
-    grid-column: 1 / 4;
+.jerry, .context-box{
     grid-row: 1 / 2;
 }
-.jerry img{
-    aspect-ratio: 3 / 4;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.jerry{
+    /* scale: .8; */
+    grid-column: 1 / 4;
 }
 .context-box{
-    grid-row: 2 / 3;
-    grid-column: 3 / 8;
-    margin-block-start: 10em;
-    margin-inline-end: -7em;
+    grid-column: 3 / -1;
     background: var(--Very-Dark-Purple);
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
     padding: 2em;
-    align-items: center;
+    align-items: start;
+    text-align: left;
+    line-height: 2em;
+    margin-inline-start: 5%;
+    position: relative;
+    top: 25%;
 }
 .context-box .title{
     font-family: var(--font-family-2);
     color: var(--White);
-    font-size: clamp(2rem, 2.5vw, 6.5rem);
+    font-size: clamp(2rem, 3vw, 6.5rem);
 }
 .context-paragraph{
     font-family: var(--font-family-1);
     color: var(--White);
-    font-size: clamp(1.23rem, 1.5vw, 3rem);
+    font-size: clamp(1rem, 1vw, 3rem);
 }
-.bottom .spiral{
-    width: 221px;
-    height: 212px;
-    grid-column:  5/-1;
-    grid-row: 2 / 3;
+.spiral{
+    grid-column:  4/-1;
+    /* grid-row: 1 / 3; */
     position: relative;
-    top: 40%;
-    left: 10%
-}
-.bottom .spiral img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    bottom: 50%;
+    left: 1%;
 }
 .footer{
     display: flex;
@@ -264,9 +253,9 @@ picture{
     .top{
         height: 33.765rem;
     }
-    picture{
+    .iPhone-11{
         top: 0;
-        left: 30%;
+        left: 0;
     }
     .flex{
         flex-direction: column;
@@ -288,37 +277,33 @@ picture{
     .main-art{
         padding: 0 1.5em;
     }
-    .phone{
+    /* .phone{
         position: relative;
         top: 10%;
         left: 5%;
         display: grid;
         place-content: center;
-    }
+    } */
     .bottom{
         height: auto;
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        width: 100%;
-        max-width: 70em;
-        padding: 0 2em;
+        width: 90%;
+        margin: 0 auto;
     }
     .jerry{
-        width: 20em;
-        height: 20em;
-        grid-column: 1 / 3;
+        scale: .8;
+        grid-column: 1 / 4;
     }
     .context-box{
-        grid-row: 2 / 3;
-        grid-column: 2 / 9;
-        margin-top: 10em; 
-        margin-inline-start: 2.5em;
+        grid-column: 3 / -1;
+        position: relative;
+        top: 0;
     }
     .spiral{
-        grid-column: 7 / -1;
-        grid-row: 1 / 2;
+        scale: .8;
+        grid-column: 6 / -1;
+        grid-row: 2 / 3;
         position: relative;
-        top: 20em; 
         margin-inline-start: 2.5em;
     }
 }
@@ -352,7 +337,7 @@ picture{
     .article{
         padding: 1em 0;
     }
-    picture{
+    .iPhone-11{
         top: 13%;
         left: 13%;
     }
@@ -385,10 +370,7 @@ picture{
         text-align: center;
         place-self: center;
         margin: auto;
-        /* margin-inline-start: 0;
-        margin-block-start: 0; */
         position: relative;
-        /* bottom: 4em; */
     }
     .spiral,.spiral-1,.spiral-2{
         display: none;
