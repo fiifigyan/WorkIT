@@ -92,7 +92,7 @@ header span{
     /* font-size: clamp(1rem, 1vw, 4rem); */
     padding: 1em;
     border: 2px solid var(--Light-Lemon-Green);
-    font-weight: 400;
+    font-weight: 500;
     transition: .3s ease-in-out;
 }
 .btn:hover{
@@ -289,18 +289,20 @@ header span{
         display: grid;
         width: 90%;
         margin: 0 auto;
+        padding: 2em 0;
     }
     .jerry{
         scale: .8;
         grid-column: 1 / 4;
     }
     .context-box{
-        grid-column: 3 / -1;
+        margin-inline-start: 0;
+        grid-column: 4 / -1;
         position: relative;
         top: 0;
     }
     .spiral{
-        scale: .8;
+        /* scale: .8; */
         grid-column: 6 / -1;
         grid-row: 2 / 3;
         position: relative;
@@ -356,10 +358,11 @@ header span{
     .jerry{
         width: 15em;
         height: 15em;
-        grid-column: 2 / 5;
+        grid-column: 1 / -1;
         place-self: center;
         position: relative;
         top: 30%;
+        right: 5%;
     }
     .context-box{
         z-index: 2;
@@ -374,5 +377,9 @@ header span{
     }
     .spiral,.spiral-1,.spiral-2{
         display: none;
+    }
+    .applyForAccess-btn{
+        display: grid;
+        place-self: center;
     }
 }
